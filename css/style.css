@@ -1,0 +1,339 @@
+:root {
+  --primary: #151515;
+  --bg: #ffffff;
+  --red: #f55353;
+  --blue: #143f6b;
+  --yellow: #feb139;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: var(--bg);
+  color: #151515;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* border-bottom: 1px solid #0f0f0f; */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo img {
+  width: 40%;
+  height: 40%;
+}
+
+.navbar .navbar-nav a {
+  color: var(--primary);
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #151515;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #143f6b;
+}
+
+.navbar-extra {
+  display: none;
+}
+
+/* #hamburger-menu {
+  display: none;
+} */
+
+/* hero section */
+/* .hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../Hero Section.png");
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  margin-top: 10px;
+} */
+
+.hero {
+  text-align: center;
+}
+
+.hero .main-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+}
+
+.hero .main-hero img {
+  max-width: 600px;
+  object-fit: contain;
+}
+
+.hero .content h5 {
+  text-align: center;
+  position: center;
+}
+
+.hero .main-hero a {
+  font-size: 60px;
+  color: #151515;
+}
+
+/* Description */
+
+.descProf .desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -10px;
+  color: #ffffff;
+  background-color: #151515;
+  padding: 70px 0;
+}
+
+.descProf .desc h1 {
+  margin: 0 100px;
+  max-width: 330px;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.descProf .desc p {
+  margin: 0 100px;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.headline {
+  margin-top: -10px;
+  text-align: center;
+  background-color: #151515;
+  color: #ffffff;
+  font-weight: bolder;
+  font-size: large;
+  letter-spacing: 3px;
+}
+
+/* Project section */
+.project-section h1 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.project-section p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.my-project {
+  margin: 0 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 140px;
+  row-gap: 65px;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bolder;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.my-project p {
+  width: 250px;
+  margin-top: 10px;
+}
+
+footer {
+  color: #ffffff;
+  background-color: #151515;
+  padding: 25px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+  column-gap: 30px;
+}
+
+.footer h1 {
+  font-weight: lighter;
+  font-size: 60px;
+}
+
+.vertical-line {
+  background-color: white;
+  width: 1px;
+  height: 80px;
+}
+
+.footer .sosmed-logo {
+  display: flex;
+  gap: 20px;
+  font-size: 30px;
+}
+
+footer p {
+  text-align: center;
+  margin-top: 25px;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.footer img {
+  width: 200px;
+}
+/* Media Queries */
+
+/* Tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar .navbar-logo img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .navbar-extra {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    /* navbar yg awalnya ditengah akan dipindahkan 
+    ke luar layar sebelah kanan layar agar bisa di pakai di 
+    hamburger menu*/
+    position: absolute;
+    top: 100%;
+    right: -100%; /* menggeser keluar layar*/
+    background-color: #151515;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block; /* membuat elemennya turun kebawah seperti list */
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: var(--bg);
+  }
+
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    transform-origin: 0 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--bg);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .hero .main-hero img {
+    max-width: 400px;
+    position: relative;
+    z-index: -1;
+  }
+
+  .hero .main-hero {
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .descProf .desc {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .descProf .desc h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .headline {
+    position: relative;
+    z-index: 2;
+    font-size: small;
+    padding: 0 50px;
+  }
+
+  .footer h1 {
+    font-size: 30px;
+  }
+
+  .footer {
+    justify-content: space-between;
+    margin: auto;
+  }
+}
+
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
