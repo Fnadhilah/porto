@@ -80,22 +80,6 @@ body {
   display: none;
 }
 
-/* #hamburger-menu {
-  display: none;
-} */
-
-/* hero section */
-/* .hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background-image: url("../Hero Section.png");
-  background-repeat: no-repeat;
-  background-size: 40%;
-  background-position: center;
-  margin-top: 10px;
-} */
-
 .hero {
   text-align: center;
 }
